@@ -4,41 +4,50 @@
 //
 // This file may be distributed under the terms of the GNU GPLv3 license.
 
-// Rubber dimentions
+// Misc measurements:
+//   - Glass plate is 4mm thick.
+//   - Aluminum heat spreader is 3mm thick.
+//   - Cork board is 2mm thick.
+//   - L-shaped rubber is 4mm thick.
+//   - Bottom rubber is 3mm thick.
+
+// Spacer external dimensions
 bigx=22;
 bigy=22;
-cutx=15;
-cuty=15;
-cornershort=4.2;
-height = 3.6;
+cutx=14.5;
+cuty=14.5;
+cornershort=3.5;
+height = 5.0;
 
 // Screw location and size
 screwx=14.75;
 screwy=4.75;
-screwr=2.3;
+screwr=1.8;
 
-module lrubber() {
-polygon( [
-  [0, cornershort],
-  [cornershort, 0],
+$fs = .5;
 
-  [bigx-cornershort, 0],
-  [bigx, cornershort],
+module spacer() {
+    module lrubber() {
+        polygon([[0, cornershort], [cornershort, 0],
+                 [bigx-cornershort, 0], [bigx, cornershort],
 
-  [bigx, bigy-cuty],
-  [bigx-cutx, bigy-cuty],
-  [bigx-cutx, bigy],
+                 [bigx, bigy-cuty], [bigx-cutx, bigy-cuty], [bigx-cutx, bigy],
 
-  [cornershort, bigy],
-  [0, bigy-cornershort] ]);
+                 [cornershort, bigy], [0, bigy-cornershort] ]);
+    }
+
+    module lrubberwithholes() {
+        difference() {
+            lrubber();
+            translate([screwx, screwy])
+                circle(r=screwr);
+            translate([screwy, screwx])
+                circle(r=screwr);
+        }
+    }
+
+    linear_extrude(height = height)
+        lrubberwithholes();
 }
 
-module lrubberwithholes() {
-  difference() {
-    lrubber();
-    translate([screwx, screwy]) circle(screwr);
-    translate([screwy, screwx]) circle(screwr);
-  }
-}
-
-linear_extrude(height = height) lrubberwithholes();
+spacer();
