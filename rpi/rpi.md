@@ -8,15 +8,13 @@ with 0.200mm layer height and 20% infill.  I mounted the case
 vertically along the right side of the M2 frame (just under the X
 stepper motor).
 
-For the Raspberry Pi camera module, I printed just the camera case and
-ball joint from https://www.thingiverse.com/thing:256960 .  I designed
-a separate [ball joint holder](m2-rpi-camera.stl).  I printed in PLA.
-The holder attaches to the screw holding the M2 X axis carriage stop
-(on the upper right part of the M2 frame).
+For the Raspberry Pi camera module, I designed a
+[camera holder](m2-rpi-camera.stl).  Printed in PETG with 0.200mm
+layer height and 20% infill.  The holder is mounted inside the M2
+steel frame on the upper right side.
 
 Caveats:
 
-* The camera mount is not very good.  The ball joint can come loose
-  causing the camera to point away from the print.  If the X axis
-  carriage moves all the way to its maximum position, it can collide
-  with the camera.
+* The camera picks up some glare from the LED lights and it's position
+  isn't able to see the nozzle when the X carriage is near the X
+  maximum.
