@@ -10,8 +10,8 @@ stepper motor).
 
 For the Raspberry Pi camera module, I designed a
 [camera holder](m2-rpi-camera.stl).  Printed in PETG with 0.200mm
-layer height and 20% infill.  The holder is mounted inside the M2
-steel frame on the upper right side.
+layer height and 20% infill.  The holder is mounted outside the M2
+steel frame on the upper right side (behind the X stepper).
 
 Caveats:
 
