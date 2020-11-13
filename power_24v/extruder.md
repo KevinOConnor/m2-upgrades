@@ -20,9 +20,7 @@ fingers) and appears to have been printed with ~20% infill.
 I printed a new motor mount from:
 https://github.com/MakerGear/M2/blob/master/Printed%20Parts/STL/M2%20Extruder%20Motor%20Mount%20r3.STL
 
-I printed it in PLA with 0.200mm layer height and 80% infill.  I'd
-have preferred to print in PETG or ABS, but the extruder was finicky
-with the broken mount so I went ahead with PLA.
+I printed it in ABS with 0.200mm layer height and 80% infill.
 
 ## Hotend upgrade to 24V
 
