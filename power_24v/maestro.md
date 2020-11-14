@@ -13,7 +13,3 @@ harness".  That involved cutting nearly all the zip ties on the
 existing wires, connecting the wires to the new electronics, applying
 new zip ties to bundle the wires, and then reapplying the wire
 shrouds.
-
-Caveats:
-
-* I have not yet designed a cover for the electronics.
