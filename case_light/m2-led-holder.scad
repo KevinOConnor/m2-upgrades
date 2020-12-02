@@ -28,6 +28,7 @@ led_frame_y = 15;
 led_frame_length = 200;
 led_frame_height = .6;
 led_width = 10 + .5;
+light_width = 4;
 led_tracks = 5;
 spacing = 100 / 6;
 track_offsets = [2*spacing/5, 3*spacing/5, -spacing/5, spacing/5, 0];
@@ -55,9 +56,8 @@ module led_plate() {
     module plate() {
         hull() {
             cyl(screw_holder, 0, 0);
-            cyl(hull_dia, hull_left, hull_y1);
             cyl(hull_dia, x_idler_offset_x, hull_y1 - x_idler_offset_y1);
-            cyl(hull_dia, x_idler_offset_x, hull_y1 - x_idler_offset_y2);
+            cyl(hull_dia, hull_left, hull_y1 - x_idler_offset_y2);
         }
         hull() {
             cyl(hull_dia, x_idler_offset_x, hull_y1 - x_idler_offset_y1);
@@ -71,7 +71,12 @@ module led_plate() {
         }
     }
     module led_track() {
+        // Main channel to hold leds
         cube([led_frame_length, led_width, plate_height]);
+        // Open space for light
+        translate([0, (led_width - light_width)/2, -99])
+            cube([led_frame_length, light_width, plate_height+99+CUT]);
+        // Space for led wires
         bump_z = plate_height - (led_frame_height+led_bump_height);
         translate([led_frame_length - CUT, 0, bump_z])
             cube([led_bump_length+2*CUT, led_width, plate_height]);
