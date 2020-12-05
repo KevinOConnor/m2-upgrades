@@ -43,7 +43,7 @@ Amazon).  I then used the existing heater wiring.
 ## Part cooling fan upgrade to 24V
 
 I printed the "E3D_30_mm_Duct.stl" and "E3D_40_mm_Duct.stl" found at
-https://www.thingiverse.com/thing:1165614/files .  Printed in PETG
+https://www.thingiverse.com/thing:1165614/files .  Printed in ABS
 with 0.200mm layer height.  To assemble, I purchased a "40mm WINSINN
 24V fan" ($19 for 5-pack from Amazon) along with "1/4 inch x 1/16 inch
 magnets" ($7 for 25-pack from Amazon).
