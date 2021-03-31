@@ -29,6 +29,7 @@ led_frame_length = 200;
 led_frame_height = .6;
 led_width = 10 + .5;
 light_width = 4;
+light_height = 0.4;
 led_tracks = 5;
 spacing = 100 / 6;
 track_offsets = [2*spacing/5, 3*spacing/5, -spacing/5, spacing/5, 0];
@@ -74,7 +75,8 @@ module led_plate() {
         // Main channel to hold leds
         cube([led_frame_length, led_width, plate_height]);
         // Open space for light
-        translate([0, (led_width - light_width)/2, -99])
+        light_z = light_height-led_frame_height;
+        translate([0, (led_width - light_width)/2, light_z])
             cube([led_frame_length, light_width, plate_height+99+CUT]);
         // Space for led wires
         bump_z = plate_height - (led_frame_height+led_bump_height);
