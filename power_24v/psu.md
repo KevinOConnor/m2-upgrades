@@ -1,8 +1,8 @@
 This documents an upgrade of the Makergear M2 power supply to 24V.
 
 I printed the power supply holder at
-https://www.thingiverse.com/thing:4491723 .  Printed in PETG
-with 0.280mm layer height.
+https://www.thingiverse.com/thing:4491723 .  Printed in ABS with
+0.200mm layer height.
 
 I purchased a "MEAN WELL LRS-350-24 350W 24V power supply" ($29 from
 Amazon).  It is my understanding that there are forgeries of the MEAN
